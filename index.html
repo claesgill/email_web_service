@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Web Service</title>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="email.js"></script>
 </head>
+<style>
+    input {
+        margin: 3px;
+        border-radius: 5px;
+        font-size: larger;
+    }
+</style>
 <body>
-    <form id="email-form" onsubmit="event.preventDefault(); sendEmail()">
-        <input id="input" type="text" name="input" />
+    <div align="center">
+        <input id="email" type="text" name="email" placeholder=" example@gmail.com" />
         <br>
-        <input type="submit" value="Send email" />
-    </form>
+        <input id="password" type="password" name="password" placeholder=" password" />
+        <br>
+        <!-- <input id="host" type="text" name="host" placeholder="stmp.one.com" /> -->
+        <!-- <br> -->
+        <input type="button" value="Send email" onclick="sendEmail()" />
+    </div>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="email.js"></script>
 </html>
